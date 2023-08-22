@@ -1,0 +1,61 @@
+services:
+  database:
+    platform: linux/x86_64
+    image: mysql:8.0
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./:/app/
+    environment:
+      MYSQL_DATABASE: demo
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD: user
+    networks:
+      - internal
+
+  rabbitmq:
+    image: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - internal
+
+  redis:
+    image: redis
+    hostname: redis
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - internal
+
+  rpg:
+    container_name: rpg-api
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    ports:
+      - "10001:80"
+      - "10002:443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - database
+      - rabbitmq
+    volumes:
+      - ./:/app/app
+    links:
+      - database
+      - rabbitmq
+      - redis
+    networks:
+      - internal
+
+networks:
+  internal:
+    name: internal
