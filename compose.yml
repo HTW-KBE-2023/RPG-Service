@@ -4,7 +4,7 @@ services:
     image: mysql
     container_name: rpg_database
     ports:
-      - "3306:3306"
+      - "10003:3306"
     volumes:
       - ./:/app/
     environment:
@@ -13,7 +13,7 @@ services:
       MYSQL_PASSWORD: user
       MYSQL_ROOT_PASSWORD: user
     networks:
-      - internal
+      - rpg_net
 
   rabbitmq:
     image: masstransit/rabbitmq
@@ -22,7 +22,7 @@ services:
       - "15672:15672"
       - "5672:5672"
     networks:
-      - internal
+      - rpg_net
 
   rpg_api:
     container_name: rpg_api
@@ -46,8 +46,8 @@ services:
       - rpg_database
       - rabbitmq
     networks:
-      - internal
+      - rpg_net
 
 networks:
-  internal:
-    name: internal
+  rpg_net:
+    name: rpg_net
