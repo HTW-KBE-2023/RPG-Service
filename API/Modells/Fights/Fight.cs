@@ -7,10 +7,10 @@ namespace API.Modells.Fights
 {
     public class Fight
     {
-        public Guid Id { get; init; } = Guid.NewGuid();
-        public Player Player { get; init; } = new Player();
-        public Monster Enemy { get; init; } = new Monster();
-        public IList<string> Summary { get; init; } = new List<string>();
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public Player Player { get; set; } = new Player();
+        public Monster Enemy { get; set; } = new Monster();
+        public IList<string> Summary { get; set; } = new List<string>();
         public bool Completed { get; set; }
 
         public void Simulate(IDiceService dice)
