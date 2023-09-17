@@ -1,9 +1,9 @@
-using API.Modells.Fights;
-using API.Modells.Fights.Responses;
-using API.Modells.Monsters;
-using API.Modells.Monsters.Requests;
-using API.Modells.Monsters.Responses;
-using API.Modells.Players;
+using API.Models.Fights;
+using API.Models.Fights.Responses;
+using API.Models.Monsters;
+using API.Models.Monsters.Requests;
+using API.Models.Monsters.Responses;
+using API.Models.Players;
 using API.Services.Dice;
 using Boxed.Mapping;
 using MassTransit;

@@ -1,4 +1,4 @@
-﻿namespace API.Modells.Fights.Responses;
+﻿namespace API.Models.Fights.Responses;
 
 public class FightsResponse
 {

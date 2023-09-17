@@ -1,7 +1,7 @@
-﻿using API.Modells.Monsters;
-using API.Modells.Players;
+﻿using API.Models.Monsters;
+using API.Models.Players;
 
-namespace API.Modells.Fights.Responses;
+namespace API.Models.Fights.Responses;
 
 public class FightResponse
 {

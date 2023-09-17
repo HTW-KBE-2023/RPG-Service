@@ -1,9 +1,9 @@
-﻿using API.Modells.Monsters;
-using API.Modells.Players;
+﻿using API.Models.Monsters;
+using API.Models.Players;
 using API.Services.Dice;
 using API.Utility;
 
-namespace API.Modells.Fights
+namespace API.Models.Fights
 {
     public class Fight
     {

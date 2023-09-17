@@ -1,6 +1,6 @@
-﻿using API.Modells.Fights;
-using API.Modells.Monsters;
-using API.Modells.Players;
+﻿using API.Models.Fights;
+using API.Models.Monsters;
+using API.Models.Players;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 

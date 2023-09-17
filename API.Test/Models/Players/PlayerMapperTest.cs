@@ -1,6 +1,6 @@
-using API.Modells.Monsters;
-using API.Modells.Players;
-using API.Modells.Players.Responses;
+using API.Models.Monsters;
+using API.Models.Players;
+using API.Models.Players.Responses;
 using Boxed.Mapping;
 
 namespace API.Test.Models.Players

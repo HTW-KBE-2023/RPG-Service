@@ -1,10 +1,10 @@
-﻿using API.Modells.Monsters.Requests;
-using API.Modells.Monsters.Responses;
-using API.Modells.Players;
-using API.Modells.Players.Responses;
+﻿using API.Models.Monsters.Requests;
+using API.Models.Monsters.Responses;
+using API.Models.Players;
+using API.Models.Players.Responses;
 using Boxed.Mapping;
 
-namespace API.Modells.Monsters;
+namespace API.Models.Monsters;
 
 public class PlayerMapper : IMapper<Player, PlayerResponse>
 {

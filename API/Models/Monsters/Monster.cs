@@ -1,6 +1,6 @@
 ﻿using API.Utility;
 
-namespace API.Modells.Monsters
+namespace API.Models.Monsters
 {
     public class Monster : IFightable
     {

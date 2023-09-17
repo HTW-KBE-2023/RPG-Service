@@ -1,9 +1,9 @@
 ﻿using System.Xml.Linq;
-using API.Modells.Fights;
+using API.Models.Fights;
 using API.Utility;
 using Microsoft.AspNetCore.Connections;
 
-namespace API.Modells.Players
+namespace API.Models.Players
 {
     public class Player : IFightable
     {

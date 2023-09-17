@@ -1,4 +1,4 @@
-﻿namespace API.Modells.Monsters.Requests;
+﻿namespace API.Models.Monsters.Requests;
 
 public class UpdateMonsterRequest
 {

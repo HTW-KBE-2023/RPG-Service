@@ -1,4 +1,4 @@
-﻿namespace API.Modells.Players.Responses;
+﻿namespace API.Models.Players.Responses;
 
 public class PlayerResponse
 {

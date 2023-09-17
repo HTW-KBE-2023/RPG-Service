@@ -1,4 +1,4 @@
-﻿namespace API.Modells.Monsters.Responses;
+﻿namespace API.Models.Monsters.Responses;
 
 public class MonsterResponse
 {
