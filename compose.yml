@@ -13,16 +13,16 @@ services:
       MYSQL_PASSWORD: user
       MYSQL_ROOT_PASSWORD: user
     networks:
-      - database
+      - internal
 
   rabbitmq:
-    image: rabbitmq
+    image: masstransit/rabbitmq
     hostname: rabbitmq
     ports:
       - "15672:15672"
       - "5672:5672"
     networks:
-      - rabbitmq
+      - internal
 
   rpg_api:
     container_name: rpg_api
@@ -36,19 +36,18 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
     depends_on:
-      - rpg_database
-      - rabbitmq
+      rpg_database:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
     volumes:
       - ./:/app/app
     links:
       - rpg_database
       - rabbitmq
     networks:
-      - rabbitmq
-      - database
+      - internal
 
 networks:
-  rabbitmq:
-    name: rabbitmq
-  database:
-    name: database
+  internal:
+    name: internal
