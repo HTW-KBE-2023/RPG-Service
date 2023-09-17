@@ -1,21 +1,10 @@
-using API.Port.Database;
-using API.Services.Dice;
-using Microsoft.EntityFrameworkCore;
+using API.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<RPGContext>(options =>
-{
-    var connection = builder.Configuration.GetConnectionString("MySQL");
-    options.UseMySql(connection, ServerVersion.AutoDetect(connection));
-});
-
-builder.Services.AddTransient<DbInitialiser>();
+builder.AddDatabaseConfiguration();
 
 builder.Services.AddControllers();
-builder.Services.AddSingleton<IDiceService, DiceService>();
-
-// Add services to the container. Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -24,6 +13,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.RecreateDatabaseWithData();
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }
