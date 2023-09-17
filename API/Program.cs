@@ -1,6 +1,16 @@
+using API.Port.Database;
 using API.Services.Dice;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<RPGContext>(options =>
+{
+    var connection = builder.Configuration.GetConnectionString("MySQL");
+    options.UseMySql(connection, ServerVersion.AutoDetect(connection));
+});
+
+builder.Services.AddTransient<DbInitialiser>();
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IDiceService, DiceService>();
