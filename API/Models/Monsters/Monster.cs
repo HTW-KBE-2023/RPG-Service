@@ -2,16 +2,14 @@
 
 namespace API.Models.Monsters
 {
-    public class Monster : IFightable
+    public class Monster : Entity, IFightable
     {
         private int _health;
 
-        public Monster()
+        public Monster() : base(Guid.NewGuid())
         {
             _health = MaxHealth;
         }
-
-        public Guid Id { get; set; } = Guid.NewGuid();
 
         public int Level { get; set; } = 1;
         public string Name { get; set; } = "No-Name-Monster";
