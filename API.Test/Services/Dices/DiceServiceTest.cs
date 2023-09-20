@@ -2,7 +2,7 @@ using API.Services.Dice;
 using Moq;
 using Xunit;
 
-namespace API.Test.Services.Dice
+namespace API.Test.Services.Dices
 {
     public class DiceServiceTest
     {
