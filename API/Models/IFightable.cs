@@ -1,4 +1,4 @@
-﻿namespace API.Utility
+﻿namespace API.Models
 {
     public interface IFightable
     {

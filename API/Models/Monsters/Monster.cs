@@ -1,6 +1,4 @@
-﻿using API.Utility;
-
-namespace API.Models.Monsters
+﻿namespace API.Models.Monsters
 {
     public class Monster : Entity, IFightable
     {

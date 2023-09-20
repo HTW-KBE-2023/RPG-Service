@@ -1,6 +1,5 @@
 ﻿using System.Xml.Linq;
 using API.Models.Fights;
-using API.Utility;
 using Microsoft.AspNetCore.Connections;
 
 namespace API.Models.Players
