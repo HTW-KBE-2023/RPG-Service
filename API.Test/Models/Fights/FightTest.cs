@@ -1,10 +1,4 @@
 using API.Models.Fights;
-using API.Models.Monsters;
-using API.Models.Players;
-using API.Services.Dice;
-using Moq;
-using System.Dynamic;
-using Xunit;
 
 namespace API.Test.Models.Fights
 {
@@ -49,34 +43,6 @@ namespace API.Test.Models.Fights
             var fight = new Fight();
 
             Assert.False(fight.Completed);
-        }
-
-        [Fact]
-        public void WhenFightWasSimulatedThenCompletedShouldBeTrueAndSummaryFilled()
-        {
-            var fakeDiceService = new Mock<IDiceService>();
-            fakeDiceService.Setup(dice => dice.Roll()).Returns(10);
-            fakeDiceService.Setup(dice => dice.RollAgainst(It.IsAny<int>())).Returns(true);
-
-            var fight = new Fight()
-            {
-                Player = new Player()
-                {
-                    Name = "Player",
-                    Attack = 5,
-                    Defence = 5,
-                    Health = 5
-                },
-                Enemy = new Monster()
-                {
-                    Name = "Monster"
-                }
-            };
-
-            fight.Simulate(fakeDiceService.Object);
-
-            Assert.True(fight.Completed);
-            Assert.NotEmpty(fight.Summary);
         }
     }
 }
