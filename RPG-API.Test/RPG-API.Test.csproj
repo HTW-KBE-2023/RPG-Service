@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\API\RPG-API.csproj" />
+    <ProjectReference Include="..\RPG-API\RPG-API.csproj" />
   </ItemGroup>
 
 </Project>
