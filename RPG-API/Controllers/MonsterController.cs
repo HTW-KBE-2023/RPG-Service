@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controller;
 
-[Route("monsters")]
+[Route("api/monsters")]
 [ApiController]
 public class MonsterController : ControllerBase
 {

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controller;
 
-[Route("fights")]
+[Route("api/fights")]
 [ApiController]
 public class FightsController : ControllerBase
 {
