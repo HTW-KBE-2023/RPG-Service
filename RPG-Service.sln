@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{BB0D07D3-453A-4047-92F3-BCB3E9E55F2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPG-API", "RPG-API\RPG-API.csproj", "{BB0D07D3-453A-4047-92F3-BCB3E9E55F2A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{8277F383-A2D8-41E6-AA9E-10168FFB5A5E}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{F4DA46
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3B2A26DC-7F07-4A1F-AEA6-9CC38A1D1017}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Test", "API.Test\API.Test.csproj", "{5450DDB7-5376-49FC-B22E-C364EECA7469}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPG-API.Test", "RPG-API.Test\RPG-API.Test.csproj", "{5450DDB7-5376-49FC-B22E-C364EECA7469}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BB0D07D3-453A-4047-92F3-BCB3E9E55F2A} = {BB0D07D3-453A-4047-92F3-BCB3E9E55F2A}
 	EndProjectSection
