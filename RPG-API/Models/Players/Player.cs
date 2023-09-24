@@ -17,8 +17,6 @@ namespace API.Models.Players
         public int Attack { get; set; } = 1;
         public double Experience { get; set; } = 0;
 
-        public IList<Fight> Fights { get; set; } = new List<Fight>();
-
         public void TakesDamage(int damage)
         {
             Health -= damage;

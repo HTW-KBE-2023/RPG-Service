@@ -22,7 +22,6 @@ namespace API.Test.Models.Players
             Assert.Equal(1, player.Defence);
             Assert.Equal(1, player.Attack);
             Assert.Equal(0, player.Experience);
-            Assert.Empty(player.Fights);
         }
 
         [Fact]
