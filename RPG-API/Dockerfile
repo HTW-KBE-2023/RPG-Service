@@ -8,7 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["RPG-API/RPG-API.csproj", "RPG-API/"]
-RUN dotnet restore "API/API.csproj"
+RUN dotnet restore "RPG-API/RPG-API.csproj"
 COPY . .
 WORKDIR "/src/RPG-API"
 RUN dotnet build "RPG-API.csproj" -c Release -o /app/build
