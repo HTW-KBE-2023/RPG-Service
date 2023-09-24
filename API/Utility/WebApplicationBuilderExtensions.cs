@@ -6,6 +6,7 @@ using API.Port.Database;
 using API.Port.Repositories;
 using API.Services;
 using API.Services.Dice;
+using API.Services.Fights;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,10 +27,11 @@ namespace API.Utility
 
         public static void AddApplicationServices(this WebApplicationBuilder builder)
         {
-            builder.Services.AddScoped<IDiceService, DiceService>(_ => new DiceService(Random.Shared, DiceValue.D20));
-            builder.Services.AddScoped<IGenericService<Fight>, GenericService<Fight>>();
-            builder.Services.AddScoped<IGenericService<Player>, GenericService<Player>>();
-            builder.Services.AddScoped<IGenericService<Monster>, GenericService<Monster>>();
+            builder.Services.AddTransient<IDiceService, DiceService>(_ => new DiceService(Random.Shared, DiceValue.D20));
+            builder.Services.AddTransient<FightSimulator>();
+            builder.Services.AddTransient<IGenericService<Fight>, GenericService<Fight>>();
+            builder.Services.AddTransient<IGenericService<Player>, GenericService<Player>>();
+            builder.Services.AddTransient<IGenericService<Monster>, GenericService<Monster>>();
         }
 
         public static void AddMapper(this WebApplicationBuilder builder)
