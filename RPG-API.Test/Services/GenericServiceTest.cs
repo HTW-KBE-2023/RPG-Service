@@ -147,14 +147,12 @@ namespace API.Test.Services
             var fightValidator = new FightValidator();
             var unitOfWork = new UnitOfWork(_context);
 
-#pragma warning disable CS8625 // Ein NULL-Literal kann nicht in einen Non-Nullable-Verweistyp konvertiert werden.
             var fight = new Fight()
             {
                 Id = Guid.NewGuid(),
-                Player = null,
+                Summary = new List<string>() { "Ha!" },
                 Completed = false
             };
-#pragma warning restore CS8625 // Ein NULL-Literal kann nicht in einen Non-Nullable-Verweistyp konvertiert werden.
 
             _context.Add(fight);
             _context.SaveChanges();
@@ -163,6 +161,7 @@ namespace API.Test.Services
 
             IGenericService<Fight> fightService = new GenericService<Fight>(unitOfWork, fightValidator);
 
+            fight.Id = Guid.Empty;
             fight.Completed = true;
 
             var result = fightService.Update(fight);

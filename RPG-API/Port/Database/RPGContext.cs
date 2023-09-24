@@ -24,6 +24,14 @@ namespace API.Port.Database
                         .HasConversion(
                             summary => JsonConvert.SerializeObject(summary),
                             summary => JsonConvert.DeserializeObject<List<string>>(summary));
+
+            modelBuilder.Entity<Fight>()
+                        .Navigation(fight => fight.Player)
+                        .AutoInclude();
+
+            modelBuilder.Entity<Fight>()
+                        .Navigation(fight => fight.Enemy)
+                        .AutoInclude();
         }
     }
 }

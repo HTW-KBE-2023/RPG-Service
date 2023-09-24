@@ -1,6 +1,5 @@
 ﻿using API.Models.Monsters;
 using API.Models.Players;
-using API.Services.Dice;
 
 namespace API.Models.Fights
 {
