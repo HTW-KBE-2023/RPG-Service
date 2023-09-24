@@ -6,7 +6,7 @@ using FluentValidation;
 
 namespace API.Services
 {
-    public class GenericService<TEntity> : IGenericService<TEntity> where TEntity : Entity
+    public class GenericService<TEntity> : IGenericService<TEntity> where TEntity : IEntity
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IValidator<TEntity> _validator;

@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace API.Port.Repositories
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : Entity
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, IEntity
     {
         protected readonly DbContext _context;
         internal DbSet<TEntity> _dbSet;

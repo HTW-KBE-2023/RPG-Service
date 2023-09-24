@@ -4,7 +4,7 @@ namespace API.Port.Repositories
 {
     public interface IUnitOfWork
     {
-        public IGenericRepository<TEntity> GetGenericRepository<TEntity>() where TEntity : Entity;
+        public IGenericRepository<TEntity> GetGenericRepository<TEntity>() where TEntity : IEntity;
 
         public void Save();
     }

@@ -4,7 +4,7 @@ using API.Utility;
 
 namespace API.Services
 {
-    public interface IGenericService<TEntity> where TEntity : Entity
+    public interface IGenericService<TEntity> where TEntity : IEntity
     {
         Result<TEntity, ValidationFailed> Create(TEntity entity);
 

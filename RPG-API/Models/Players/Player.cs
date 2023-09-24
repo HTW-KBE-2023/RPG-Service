@@ -4,12 +4,9 @@ using Microsoft.AspNetCore.Connections;
 
 namespace API.Models.Players
 {
-    public class Player : Entity, IFightable
+    public class Player : IEntity, IFightable
     {
-        public Player() : base(Guid.NewGuid())
-        {
-        }
-
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; } = "No-Name-Player";
         public int Level { get; set; } = 1;
         public int Health { get; set; } = 5;

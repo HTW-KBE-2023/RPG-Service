@@ -1,12 +1,7 @@
 ﻿namespace API.Models
 {
-    public abstract class Entity
+    public interface IEntity
     {
-        public Entity(Guid id)
-        {
-            Id = id;
-        }
-
         public Guid Id { get; set; }
     }
 }

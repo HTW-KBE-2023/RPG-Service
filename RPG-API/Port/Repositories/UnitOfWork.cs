@@ -54,7 +54,7 @@ namespace API.Port.Repositories
             }
         }
 
-        public IGenericRepository<TEntity> GetGenericRepository<TEntity>() where TEntity : Entity
+        public IGenericRepository<TEntity> GetGenericRepository<TEntity>() where TEntity : IEntity
         {
             var genericRepository = _genericRepositories.OfType<IGenericRepository<TEntity>>().SingleOrDefault();
             if (genericRepository is null)

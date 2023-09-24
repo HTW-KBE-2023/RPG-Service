@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace API.Port.Repositories
 {
-    public interface IGenericRepository<TEntity> where TEntity : Entity
+    public interface IGenericRepository<TEntity> where TEntity : IEntity
     {
         IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>>? filter = null,
                                                Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
