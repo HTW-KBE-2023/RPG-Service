@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MessagingContracts\MessagingContracts.csproj" />
+    <ProjectReference Include="..\MessageQueueContracts\MessagingContracts.csproj" />
   </ItemGroup>
 
 </Project>
