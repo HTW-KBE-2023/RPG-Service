@@ -19,7 +19,7 @@ namespace API.Utility
             builder.Services.AddDbContext<RPGContext>(options =>
             {
                 var connection = builder.Configuration.GetConnectionString("MySQL");
-                options.UseMySql(connection, ServerVersion.AutoDetect(connection));
+                options.UseMySql(connection, ServerVersion.AutoDetect(connection), option => option.EnableRetryOnFailure());
             });
             builder.Services.AddTransient<DbInitialiser>();
             builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
@@ -81,7 +81,7 @@ namespace API.Utility
             var password = rabbitMQConfiguration.GetValue<string>("Password");
 
             builder.Services.AddHealthChecks()
-                .AddMySql(builder.Configuration.GetConnectionString("MySQL") ?? string.Empty, tags: new List<string>() { "Database" }, timeout: TimeSpan.FromSeconds(2))
+                .AddMySql(builder.Configuration.GetConnectionString("MySQL") ?? string.Empty, tags: new List<string>() { "Database" }, timeout: TimeSpan.FromSeconds(5))
                 .AddRabbitMQ(rabbitConnectionString: $"amqp://{user}:{password}@{connection}");
         }
     }
