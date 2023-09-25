@@ -28,7 +28,7 @@ services:
     container_name: rpg_api
     build:
       context: .
-      dockerfile: API/Dockerfile
+      dockerfile: RPG-API/Dockerfile
     ports:
       - "10001:80"
       - "10002:443"
