@@ -81,7 +81,7 @@ namespace API.Utility
             var password = rabbitMQConfiguration.GetValue<string>("Password");
 
             builder.Services.AddHealthChecks()
-                .AddMySql(builder.Configuration.GetConnectionString("MySQL") ?? string.Empty)
+                .AddMySql(builder.Configuration.GetConnectionString("MySQL") ?? string.Empty, tags: new List<string>() { "Database" }, timeout: TimeSpan.FromSeconds(2))
                 .AddRabbitMQ(rabbitConnectionString: $"amqp://{user}:{password}@{connection}");
         }
     }
