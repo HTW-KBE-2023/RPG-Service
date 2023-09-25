@@ -8,7 +8,7 @@ namespace API.Port.Database
 {
     public class RPGContext : DbContext
     {
-        public RPGContext(DbContextOptions options) : base(options)
+        public RPGContext(DbContextOptions<RPGContext> options) : base(options)
         {
         }
 

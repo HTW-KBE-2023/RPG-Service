@@ -72,5 +72,17 @@ namespace API.Utility
                 });
             });
         }
+
+        public static void AddHealthChecksConfiguration(this WebApplicationBuilder builder)
+        {
+            var connection = builder.Configuration.GetConnectionString("RabbitMQ");
+            var rabbitMQConfiguration = builder.Configuration.GetSection("RabbitMQ.Configuration");
+            var user = rabbitMQConfiguration.GetValue<string>("User");
+            var password = rabbitMQConfiguration.GetValue<string>("Password");
+
+            builder.Services.AddHealthChecks()
+                .AddMySql(builder.Configuration.GetConnectionString("MySQL") ?? string.Empty)
+                .AddRabbitMQ(rabbitConnectionString: $"amqp://{user}:{password}@{connection}");
+        }
     }
 }
