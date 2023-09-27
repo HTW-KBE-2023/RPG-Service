@@ -9,7 +9,7 @@ public class FightMapper : IMapper<Fight, FightConcluded>, IMapper<Fight, FightR
 {
     public void Map(Fight source, FightConcluded destination)
     {
-        destination.Id = source.Id;
+        destination.FightId = source.Id;
         destination.Player = source.Player.Id;
         destination.Summary = source.Summary;
     }

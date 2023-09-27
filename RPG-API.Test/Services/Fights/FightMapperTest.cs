@@ -59,7 +59,7 @@ namespace API.Test.Services.Monsters
 
             var fightConcluded = mapper.Map(fight);
 
-            Assert.Equal(fight.Id, fightConcluded.Id);
+            Assert.Equal(fight.Id, fightConcluded.FightId);
             Assert.Equal(fight.Player.Id, fightConcluded.Player);
             Assert.NotNull(fightConcluded.Summary);
             Assert.NotEmpty(fightConcluded.Summary);
