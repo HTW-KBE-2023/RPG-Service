@@ -1,6 +1,7 @@
-﻿using FluentValidation;
+﻿using API.Models.Fights;
+using FluentValidation;
 
-namespace API.Models.Fights;
+namespace API.Services.Fights;
 
 public class FightValidator : AbstractValidator<Fight>
 {

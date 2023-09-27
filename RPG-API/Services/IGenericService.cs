@@ -1,6 +1,6 @@
 ﻿using API.Models;
 using API.Models.Validations;
-using API.Utility;
+using API.Services;
 
 namespace API.Services
 {

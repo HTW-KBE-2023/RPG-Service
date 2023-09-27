@@ -6,6 +6,8 @@ using API.Models.Validations.Responses;
 using API.Services;
 using Boxed.Mapping;
 using Microsoft.AspNetCore.Mvc;
+using API.Services.Monsters;
+using API.Services.Validations;
 
 namespace API.Controller;
 

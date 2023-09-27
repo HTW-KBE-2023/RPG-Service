@@ -1,9 +1,9 @@
-using API.Models.Monsters;
 using API.Models.Players;
 using API.Models.Players.Responses;
+using API.Services.Players;
 using Boxed.Mapping;
 
-namespace API.Test.Models.Players
+namespace API.Test.Services.Players
 {
     public class PlayerMapperTest
 

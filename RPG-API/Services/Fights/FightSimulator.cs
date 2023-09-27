@@ -5,6 +5,7 @@ using API.Services.Dice;
 using Boxed.Mapping;
 using MassTransit;
 using MessagingContracts.RPG;
+using API.Services.Fights;
 
 namespace API.Services.Fights
 {

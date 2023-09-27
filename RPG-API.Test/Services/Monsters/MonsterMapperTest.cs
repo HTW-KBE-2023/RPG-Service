@@ -1,17 +1,10 @@
-using API.Models.Fights;
 using API.Models.Monsters;
 using API.Models.Monsters.Requests;
 using API.Models.Monsters.Responses;
-using API.Models.Players;
-using API.Services.Dice;
+using API.Services.Monsters;
 using Boxed.Mapping;
-using MassTransit;
-using Moq;
-using System.Dynamic;
-using System.Reflection.Emit;
-using Xunit;
 
-namespace API.Test.Models.Monsters
+namespace API.Test.Services.Monsters
 {
     public class MonsterMapperTest
 

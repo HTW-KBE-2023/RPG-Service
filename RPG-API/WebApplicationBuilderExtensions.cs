@@ -1,7 +1,6 @@
 ﻿using API.Models.Fights;
 using API.Models.Monsters;
 using API.Models.Players;
-using API.Models.Validations;
 using API.Port.Database;
 using API.Port.Repositories;
 using API.Services;
@@ -9,8 +8,11 @@ using API.Services.Dice;
 using API.Services.Fights;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using API.Services.Monsters;
+using API.Services.Players;
+using API.Services.Validations;
 
-namespace API.Utility
+namespace API
 {
     public static class WebApplicationBuilderExtensions
     {

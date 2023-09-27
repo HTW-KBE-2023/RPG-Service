@@ -2,7 +2,7 @@
 
 public class CreateMonsterRequest
 {
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
     public int Level { get; set; }
     public string? Name { get; set; }
     public int BaseHealth { get; set; }

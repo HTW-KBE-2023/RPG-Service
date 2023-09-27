@@ -1,8 +1,9 @@
-﻿using API.Models.Fights.Responses;
+﻿using API.Models.Fights;
+using API.Models.Fights.Responses;
 using Boxed.Mapping;
 using MessagingContracts.RPG;
 
-namespace API.Models.Fights;
+namespace API.Services.Fights;
 
 public class FightMapper : IMapper<Fight, FightConcluded>, IMapper<Fight, FightResponse>
 {

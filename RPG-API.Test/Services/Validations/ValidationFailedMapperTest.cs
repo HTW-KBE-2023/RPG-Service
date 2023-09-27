@@ -1,12 +1,10 @@
-using API.Models.Monsters;
-using API.Models.Players;
-using API.Models.Players.Responses;
 using API.Models.Validations;
 using API.Models.Validations.Responses;
+using API.Services.Validations;
 using Boxed.Mapping;
 using FluentValidation.Results;
 
-namespace API.Test.Models.Validations
+namespace API.Test.Services.Validations
 {
     public class ValidationFailedMapperTest
 

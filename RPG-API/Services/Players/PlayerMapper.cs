@@ -4,7 +4,7 @@ using API.Models.Players;
 using API.Models.Players.Responses;
 using Boxed.Mapping;
 
-namespace API.Models.Monsters;
+namespace API.Services.Players;
 
 public class PlayerMapper : IMapper<Player, PlayerResponse>
 {

@@ -1,9 +1,9 @@
-﻿using API.Models.Monsters;
-using API.Models.Players;
+﻿using API.Models.Players;
 using API.Models.Players.Responses;
 using API.Services;
 using Boxed.Mapping;
 using Microsoft.AspNetCore.Mvc;
+using API.Services.Players;
 
 namespace API.Controller;
 

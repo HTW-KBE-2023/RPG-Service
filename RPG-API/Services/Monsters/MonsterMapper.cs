@@ -1,9 +1,9 @@
-﻿using API.Models.Monsters.Requests;
+﻿using API.Models.Monsters;
+using API.Models.Monsters.Requests;
 using API.Models.Monsters.Responses;
 using Boxed.Mapping;
-using MassTransit;
 
-namespace API.Models.Monsters;
+namespace API.Services.Monsters;
 
 public class MonsterMapper : IMapper<Monster, MonsterResponse>, IMapper<CreateMonsterRequest, Monster>, IMapper<UpdateMonsterRequest, Monster>
 {

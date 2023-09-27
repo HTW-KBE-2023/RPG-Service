@@ -1,7 +1,7 @@
 ﻿using API.Models.Players;
 using FluentValidation;
 
-namespace API.Models.Fights;
+namespace API.Services.Players;
 
 public class PlayerValidator : AbstractValidator<Player>
 {

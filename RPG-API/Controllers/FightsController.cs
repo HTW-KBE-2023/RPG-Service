@@ -3,6 +3,7 @@ using API.Models.Fights.Responses;
 using API.Services;
 using Boxed.Mapping;
 using Microsoft.AspNetCore.Mvc;
+using API.Services.Fights;
 
 namespace API.Controller;
 
